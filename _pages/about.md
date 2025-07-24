@@ -1,5 +1,11 @@
-## About Me
-
+---
+permalink: /
+title: "Stefan Oehmcke"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
 I am a professor specializing in machine learning for spatio-temporal data, with a focus on environmental and marine applications. My research centers on:
 
 - **Deep Learning for Spatio-Temporal Data:** Developing and applying advanced neural networks to analyze complex temporal and spatial patterns, particularly in remote sensing datasets.
