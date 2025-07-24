@@ -26,10 +26,10 @@ author:
   name             : "Stefan Oehmcke"
   pronouns         : "he/him"
   bio              : "Professor for Visual and Analytic Computing in Ocean Technologies (VACOT)"
-  research         : "Spatio-temporal machine learning for environmental and maritime applications"
+  #research         : "Spatio-temporal machine learning for environmental and maritime applications"
   location         : "Rostock, Germany"
   employer         : "University of Rostock"
-  uri              : "https://stefan_oehmcke.github.io"
+  #uri              : "https://stefan_oehmcke.github.io"
   email            : "stefan.oehmcke@uni-rostock.de"
 
   # Academic websites
