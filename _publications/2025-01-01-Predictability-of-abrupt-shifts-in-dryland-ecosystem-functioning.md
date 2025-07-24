@@ -8,6 +8,6 @@ venue: 'Nature Climate Change'
 paperurl: 'https://www.nature.com/articles/s41558-024-02201-0'
 citation: ' Paulo Bernardino,  Wanda De,  Stéphanie Horion,  Stefan Oehmcke,  Fabian Gieseke,  Rasmus Fensholt,  Ruben Van,  Stef Lhermitte,  Christin Abel,  Koenraad Van, &quot;Predictability of abrupt shifts in dryland ecosystem functioning.&quot; Nature Climate Change, 2025.'
 ---
-Publisher: Nature Publishing Group {UK} London
+Publisher: Nature Publishing Group UK London
 
 [Access paper here](https://www.nature.com/articles/s41558-024-02201-0){:target="_blank"}
