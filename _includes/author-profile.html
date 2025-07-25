@@ -24,13 +24,15 @@
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
+      <div style="text-align:center; margin: 1.5em 0 0 0;">
+        <a href="{{ author.employer_uri }}" target="_blank" rel="noopener">
+          <img src="{{ '/images/' | append: author.employer_logo | relative_url }}" 
+               alt="{{ author.employer }}" 
+               style="max-width:95%; margin-bottom:0;" />
+        </a>
+      </div>
       {% if author.location %}
         <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
-      {% endif %}
-      {% if author.employer_uri %}
-        <li><a href="{{ author.employer_uri }}"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</a></li>
-      {% elsif author.employer %}
-        <li><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
       {% endif %}
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
@@ -169,13 +171,4 @@
       {% endif %}      
     </ul>
   </div>
-  {% if author.employer_logo %}
-    <div style="text-align:center; margin: 1.5em 0 0 0;">
-      <a href="{{ author.employer_uri }}" target="_blank" rel="noopener">
-        <img src="{{ '/images/' | append: author.employer_logo | relative_url }}" 
-             alt="{{ author.employer }}" 
-             style="max-height:48px; max-width:90%; margin-bottom:0;" />
-      </a>
-    </div>
-  {% endif %}
 </div>
