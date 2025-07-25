@@ -27,15 +27,10 @@
       {% if author.location %}
         <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
       {% endif %}
-      {% if author.employer %}
-        <li class="author__desktop">
-          <i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>
-          {% if author.employer_uri %}
-            <a href="{{ author.employer_uri }}" target="_blank" rel="noopener">{{ author.employer }}</a>
-          {% else %}
-            {{ author.employer }}
-          {% endif %}
-        </li>
+      {% if author.employer_uri %}
+        <li><a href="{{ author.employer_uri }}"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</a></li>
+      {% elsif author.employer %}
+        <li><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
       {% endif %}
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
