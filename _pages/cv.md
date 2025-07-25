@@ -47,6 +47,7 @@ Machine learning for spatio-temporal data, Earth observation, sustainability, an
 
 ### University of Copenhagen
 - **Machine Learning and Imaging Projects** (2022-2025): Individual supervision in ML project
+- **Machine Learning for Science (MLS)** (2022-2024): Interdisciplinary course teaching ML basics
 - **Introduction to Python** (2023): Intensive course for non-computer scientists
 - **Artificial Intelligence** (2021): Lectures and exercises on recurrent neural networks
 - **Large Scale Data Analysis** (2020): Lectures and exercises on RNNs and data preparation
