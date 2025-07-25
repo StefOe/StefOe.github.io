@@ -6,6 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
+My main research interest is in AI methods of machine learning (ML) that use the temporal and spatial structure of data in the field of _ML against climate change_.
 
 ### Machine Learning for Spatio-Temporal and Multi-Modal Data on Land and at Sea  
 I develop machine learning methods for analyzing and modeling spatio-temporal data from remote sensing and multi-sensor sources. My research focuses on the detection and assessment of environmental factors from diverse sources such as satellites and other Earth observation technologies. In addition to my marine research, I have extensive experience in terrestrial environmental monitoring, contributing to projects in forestry, agriculture, and peatland restoration.
