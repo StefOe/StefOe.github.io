@@ -12,7 +12,7 @@ site_theme               : "default"
 title                    : "Stefan Oehmcke"
 title_separator          : "-"
 name                     : &name "Stefan Oehmcke"
-description              : &description "Professor for Visual and Analytic Computing in Ocean Technologies (VACOT), University of Rostock & Assistant Professor, University of Copenhagen"
+description              : &description "Professor for Visual and Analytic Computing in Ocean Technologies (VACOT), University of Rostock"
 url                      : "https://StefOe.github.io"
 baseurl                  : ""
 repository               : "StefOe/StefOe.github.io"
@@ -26,10 +26,10 @@ author:
   name             : "Stefan Oehmcke"
   pronouns         : "he/him"
   bio              : "Professor for Visual and Analytic Computing in Ocean Technologies (VACOT)"
-  research         : "Spatio-temporal machine learning for environmental and marine applications"
+  #research         : "Spatio-temporal machine learning for environmental and maritime applications"
   location         : "Rostock, Germany"
   employer         : "University of Rostock"
-  uri              : "https://stefan_oehmcke.github.io"
+  #uri              : "https://stefan_oehmcke.github.io"
   email            : "stefan.oehmcke@uni-rostock.de"
 
   # Academic websites
@@ -79,11 +79,11 @@ author:
   zhihu            : # Username
 
 # Publication Category - The following the list of publication categories and their headings
-publication_category:
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
+#publication_category:
+#  manuscripts:
+#    title: 'Journal Articles'    
+#  conferences:
+#    title: 'Conference Papers'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -216,16 +216,16 @@ kramdown:
 # These settings control the types of collections used by the template
 collections:
   teaching:
-    output: true
+    output: false
     permalink: /:collection/:path/
   publications:
     output: true
     permalink: /:collection/:path/
   portfolio:
-    output: true
+    output: false
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 
