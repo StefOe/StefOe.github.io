@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Stefan Oehmcke"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,52 +9,52 @@ redirect_from:
 
 {% include base_path %}
 
-
-# Stefan Oehmcke
 _Assistant Professor_  
 
 Albert-Einstein-Straße 21, 18059 Rostock, Germany  
 
-✉️ [Stefan.Oehmcke@uni-rostock.de](mailto:Stefan.Oehmcke@uni-rostock.de)
 
 ## Research Interests
-- Machine learning for spatio-temporal data, Earth observation, sustainability, and maritime applications
+Machine learning for spatio-temporal data, Earth observation, sustainability, and maritime applications
 
 ## Work Experience
 **Tenure-Track Assistant Professor**, University of Rostock, Institute for Visual and Analytic Computing, Germany  
-2024-10 – Present  
+10-2024 – Present  
 *Chair of 'Visual and Analytic Computing in Ocean Technologies'*  
 
 **Assistant Professor**, University of Copenhagen, Department of Computer Science, Denmark  
-2023-12 – Present  
+12-2023 – Present  
 *Global Wetland Center (Novo Nordisk Foundation)*  
 
 **Assistant Professor**, University of Copenhagen, Department of Computer Science, Denmark  
-2022-12 – 2023-11  
+12-2022 – 11-2023  
 *Project: PerformLCA; Teaching in Data Science Lab*  
 
 **PostDoc**, University of Copenhagen, Department of Computer Science, Denmark  
-2020-12 – 2022-11  
+12-2020 – 11-2022  
 *Projects: FirePrev, DeReEco, Big Satellite Monitoring (DFF)*  
 
 **PostDoc**, University of Copenhagen, Department of Computer Science, Denmark  
-2018-12 – 2020-11  
+12-2018 – 11-2020  
 *Projects: IDAS and VELUX reading data analysis*  
 
 **PostDoc**, University of Oldenburg, Computational Intelligence Lab, Germany  
-2018-01 – 2018-12  
+01-2018 – 12-2018  
 *Focus on deep learning methods for time series and image data*  
 
 
 ## Teaching Experience
+
 ### University of Rostock
-- **Deep Learning for Maritime Vision Applications (upcoming)** (starting 10.2025): Seminar with deep learning introducing lectures
+- **Deep Learning for Maritime Vision Applications** (starting 10.2025): Seminar with deep learning introducing lectures
+
 ### University of Copenhagen
 - **Machine Learning and Imaging Projects** (2022-2025): Individual supervision in ML project
 - **Introduction to Python** (2023): Intensive course for non-computer scientists
 - **Artificial Intelligence** (2021): Lectures and exercises on recurrent neural networks
 - **Large Scale Data Analysis** (2020): Lectures and exercises on RNNs and data preparation
 - **Deep Learning Workshop at CSU** (2019): Lecture on RNNs for industry participants
+
 ### University of Oldenburg
 - **Artificial Intelligence** (2018): Lectures and exercises on evolutionary algorithms and ML
 - **Data Mining For Maritime Applications** (2015): Organized and graded seminar projects
@@ -73,7 +73,7 @@ Albert-Einstein-Straße 21, 18059 Rostock, Germany
 - 2014-2017: *Ph.D. Scholarship*, SAMS
 
 ## Committees & Service
-- 2025–Present: *Journal Editor*, Künstliche Intelligenz (KUIN)
-- 2022–Present: *Workshop Organizer*, Pioneer Centre for AI
-- 2019–Present: *Editorial Manager*, Künstliche Intelligenz (KUIN)
-- 2019–Present: *Program-Committee Member*, ICANN
+- since 2025: *Journal Editor*, Künstliche Intelligenz (KUIN)
+- 2022: *Workshop Organizer*, Pioneer Centre for AI
+- 2019: *Editorial Manager*, Künstliche Intelligenz (KUIN)
+- 2019: *Program-Committee Member*, ICANN
