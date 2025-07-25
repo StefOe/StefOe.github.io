@@ -29,10 +29,8 @@ _PhD Student_
 
 ## Co-Supervision – University of Copenhagen
 
-**Hui Zhang**  
+**[Hui Zhang](https://researchprofiles.ku.dk/en/persons/hui-zhang)**  
 _PhD Student_  
-[huzh@di.ku.dk](mailto:huzh@di.ku.dk)  
 
-**Venkanna Guthula**  
+**[Venkanna Guthula](https://researchprofiles.ku.dk/en/persons/venkanna-babu-guthula)**  
 _PhD Student_  
-[vegu@di.ku.dk](mailto:vegu@di.ku.dk)  
