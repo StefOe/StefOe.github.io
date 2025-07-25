@@ -5,13 +5,7 @@
 {% endif %}
 
 <div itemscope itemtype="http://schema.org/Person">
-  <div style="text-align:lefz; margin: 1.5em 0 0 0;">
-    <a href="{{ author.employer_uri }}" target="_blank" rel="noopener">
-      <img src="{{ '/images/' | append: author.employer_logo | relative_url }}" 
-           alt="{{ author.employer }}" 
-           style="max-height:42px; max-width:95%; margin-bottom:0; background-color:white;" />
-    </a>
-  </div>
+
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
     	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
@@ -30,6 +24,14 @@
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
+      <div style="text-align:lefz; margin: 1.5em 0 0 0;">
+        <a href="{{ author.employer_uri }}" target="_blank" rel="noopener">
+          <img src="{{ '/images/' | append: author.employer_logo | relative_url }}" 
+               alt="{{ author.employer }}" 
+               style="max-height:42px; max-width:95%; margin-bottom:0; background-color:white;" />
+        </a>
+      </div>
+
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
         <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
