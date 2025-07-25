@@ -169,4 +169,13 @@
       {% endif %}      
     </ul>
   </div>
+  {% if author.employer_logo %}
+    <div style="text-align:center; margin: 1.5em 0 0 0;">
+      <a href="{{ author.employer_uri }}" target="_blank" rel="noopener">
+        <img src="{{ '/images/' | append: author.employer_logo | relative_url }}" 
+             alt="{{ author.employer }}" 
+             style="max-height:48px; max-width:90%; margin-bottom:0;" />
+      </a>
+    </div>
+  {% endif %}
 </div>
