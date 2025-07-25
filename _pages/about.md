@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Stefan Oehmcke"
+title: ""
 author_profile: true
 redirect_from: 
   - /about/
