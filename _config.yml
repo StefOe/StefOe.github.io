@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Stefan Oehmcke"
+title                    : "Earth & Ocean ML"
 title_separator          : "-"
 name                     : &name "Stefan Oehmcke"
 description              : &description "Professor for Visual and Analytic Computing in Ocean Technologies (VACOT), University of Rostock"
