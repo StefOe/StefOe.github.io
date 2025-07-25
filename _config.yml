@@ -29,11 +29,13 @@ author:
   #research         : "Spatio-temporal machine learning for environmental and maritime applications"
   location         : "Rostock, Germany"
   employer         : "University of Rostock"
-  #uri              : "https://stefan_oehmcke.github.io"
+  employer_uri     : "https://www.ief.uni-rostock.de/fakultaet/institute-und-lehrstuehle/lehrende/institute/visual-and-analytic-computing/jun-prof-dr-rer-nat-stefan-oehmcke/"
+  #uri              : ""
   email            : "stefan.oehmcke@uni-rostock.de"
 
   # Academic websites
   academia         : # URL
+  dblp             : "https://dblp.uni-trier.de/pid/136/4343.html"
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?user=k9EWJmcAAAAJ"
   impactstory      : # URL

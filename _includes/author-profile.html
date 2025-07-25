@@ -27,8 +27,16 @@
       {% if author.location %}
         <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</li>
       {% endif %}
-      {% if author.employer %}
-        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
+      {% if author.employer and author.employer_uri %}
+        <li class="author__desktop">
+          <i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>
+          <a href="{{ author.employer_uri }}" target="_blank" rel="noopener">{{ author.employer }}</a>
+        </li>
+      {% elsif author.employer %}
+        <li class="author__desktop">
+          <i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>
+          {{ author.employer }}
+        </li>
       {% endif %}
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
@@ -40,6 +48,9 @@
       <!-- Font Awesome and Academicons icons / Academic websites -->
       {% if author.academia %}
         <li><a href="{{ author.academia }}"><i class="ai ai-academia ai-fw icon-pad-right" aria-hidden="true"></i>Academia</a></li>
+      {% endif %}
+      {% if author.dblp %}
+        <li><a href="{{ author.dblp }}"><i class="ai ai-dblp ai-fw icon-pad-right" aria-hidden="true"></i>dblp</a></li>
       {% endif %}
       {% if author.arxiv %}
         <li><a href="{{ author.arxiv }}"><i class="ai ai-arxiv ai-fw icon-pad-right"></i>arXiv</a></li>

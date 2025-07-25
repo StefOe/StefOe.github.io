@@ -25,6 +25,11 @@ _PhD Student_
 _PhD Student_  
 [torben.globisch@uni-rostock.de](mailto:torben.globisch@uni-rostock.de)  
 
+**Pratham Tatraiya**
+_Research Assistant_
+[pratham.tatraiya@uni-rostock.de](mailto:pratham.tatraiya@uni-rostock.de)
+
+
 ---
 
 ## Co-Supervision – University of Copenhagen
