@@ -16,34 +16,34 @@ Machine learning for spatio-temporal data, Earth observation, sustainability, an
 
 ## Work Experience
 **Tenure-Track Assistant Professor**, University of Rostock, Institute for Visual and Analytic Computing, Germany  
-10-2024 -– Present  
+10-2024 – Present  
 *Chair of 'Visual and Analytic Computing in Ocean Technologies'*  
 
 **Assistant Professor**, University of Copenhagen, Department of Computer Science, Denmark  
-12-2023 -– Present  
+12-2023 – Present  
 *Global Wetland Center (Novo Nordisk Foundation)*  
 
 **Assistant Professor**, University of Copenhagen, Department of Computer Science, Denmark  
-12-2022 -– 11-2023  
+12-2022 – 11-2023  
 *Project: PerformLCA; Teaching in Data Science Lab*  
 
 **PostDoc**, University of Copenhagen, Department of Computer Science, Denmark  
-12-2020 –- 11-2022  
+12-2020 – 11-2022  
 *Projects: FirePrev, DeReEco, Big Satellite Monitoring (DFF)*  
 
 **PostDoc**, University of Copenhagen, Department of Computer Science, Denmark  
-12-2018 –- 11-2020  
+12-2018 – 11-2020  
 *Projects: IDAS and VELUX reading data analysis*  
 
 **PostDoc**, University of Oldenburg, Computational Intelligence Lab, Germany  
-01-2018 –- 12-2018  
+01-2018 – 12-2018  
 *Focus on deep learning methods for time series and image data*  
 
 
 ## Teaching Experience
 
 ### University of Rostock
-- **Deep Learning for Maritime Vision Applications** (starting 10.2025): Seminar with deep learning introducing lectures
+- **Deep Learning for Maritime Vision Applications** (starting 10.2025): Seminar and lectures introducing deep learning 
 
 ### University of Copenhagen
 - **Machine Learning and Imaging Projects** (2022-2025): Individual supervision in ML project
