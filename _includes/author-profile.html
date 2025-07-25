@@ -5,7 +5,13 @@
 {% endif %}
 
 <div itemscope itemtype="http://schema.org/Person">
-
+  <div style="text-align:lefz; margin: 1.5em 0 0 0;">
+    <a href="{{ author.employer_uri }}" target="_blank" rel="noopener">
+      <img src="{{ '/images/' | append: author.employer_logo | relative_url }}" 
+           alt="{{ author.employer }}" 
+           style="max-height:42px; max-width:95%; margin-bottom:0; background-color:white;" />
+    </a>
+  </div>
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
     	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
@@ -15,13 +21,7 @@
   </div>
 
   <div class="author__content">
-    <div style="text-align:lefz; margin: 1.5em 0 0 0;">
-      <a href="{{ author.employer_uri }}" target="_blank" rel="noopener">
-        <img src="{{ '/images/' | append: author.employer_logo | relative_url }}" 
-             alt="{{ author.employer }}" 
-             style="max-height:42px; max-width:95%; margin-bottom:0;" />
-      </a>
-    </div>
+
     <h3 class="author__name">{{ author.name }}</h3>
     {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
