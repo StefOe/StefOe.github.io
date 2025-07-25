@@ -11,6 +11,11 @@
     },
     "profiles": []
   },
+  "Interests": [
+    {
+      "name": "Machine learning for spatio-temporal data, Earth observation, sustainability, and maritime applications"
+    }
+  ],
   "Education": [
     {
       "institution": "University of Oldenburg",
@@ -71,13 +76,85 @@
       "summary": "Projects: IDAS and VELUX reading data analysis"
     },
     {
-      "company": "University of Oldenburg",
+      "company": "University of Oldenburg, Germany",
       "position": "PostDoc",
       "startDate": "2018-01",
       "endDate": "2018-12",
       "summary": "Focus on deep learning methods for time series and image data"
     }
   ],
+  "Teaching": [
+    {
+      "institution": "University of Rostock",
+      "courses": [
+        {
+          "course": "Deep Learning for Maritime Vision Applications (upcoming)",
+          "date": "starting 10.2025",
+          "summary": "Seminar with deep learning introducing lectures"
+        },
+ 	    ]
+    },
+	{
+      "institution": "University of Copenhagen",
+      "courses": [
+        {
+          "course": "Machine Learning and Imaging Projects",
+          "date": "2022-2025",
+          "summary": "Individual supervision in ML project"
+        },
+        {
+          "course": "Introduction to Python",
+          "date": "2023",
+          "summary": "Intensive course for non-computer scientists"
+        },
+        {
+          "course": "Artificial Intelligence",
+          "date": "2021",
+          "summary": "Lectures and exercises on recurrent neural networks"
+        },
+        {
+          "course": "Large Scale Data Analysis",
+          "date": "2020",
+          "summary": "Lectures and exercises on RNNs and data preparation"
+        },
+        {
+          "course": "Deep Learning Workshop at CSU",
+          "date": "2019",
+          "summary": "Lecture on RNNs for industry participants"
+        }
+      ]
+    },
+    {
+      "institution": "University of Oldenburg",
+      "courses": [
+        {
+          "course": "Artificial Intelligence",
+          "date": "2018",
+          "summary": "Lectures and exercises on evolutionary algorithms and ML"
+        },
+        {
+          "course": "Data Mining For Maritime Applications",
+          "date": "2015",
+          "summary": "Organized and graded seminar projects"
+        },
+        {
+          "course": "Computational Intelligence I & II",
+          "date": "2014\u20132018",
+          "summary": "Grading oral exams as 2nd examiner"
+        },
+        {
+          "course": "Programming Course Java",
+          "date": "2010\u20132011",
+          "summary": "Taught tutorials and graded assignments"
+        },
+        {
+          "course": "Operating Systems I",
+          "date": "2016",
+          "summary": "Taught tutorials and graded assignments"
+        }
+      ]
+    },
+   ],
   "Awards": [
     {
       "title": "Travel Grant",
@@ -115,11 +192,6 @@
       "organization": "ICANN",
       "position": "Program-Committee Member",
       "startDate": "2019"
-    }
-  ],
-  "Interests": [
-    {
-      "name": "Machine learning for spatio-temporal data, Earth observation, sustainability, and maritime applications"
     }
   ]
 }
