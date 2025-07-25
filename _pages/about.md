@@ -21,6 +21,6 @@ In my work, I develop self-supervised learning methods and approaches to represe
 - **Self-Supervised & Representation Learning:** Proficient in developing systems that extract meaningful structure from unlabeled data and improve performance through targeted fine-tuning.
 
 
-#### Affiliations
+### Affiliations
 - Research Affiliate, [Pioneer Centre for AI](https://www.aicentre.dk/)
 - Member of the [KI-MV Network for Artificial Intelligence](https://www.ki-mv.de/)
