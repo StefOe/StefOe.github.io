@@ -13,7 +13,7 @@ redirect_from:
 _Team Assistant_  
 [corinna.burmeister@uni-rostock.de](mailto:corinna.burmeister@uni-rostock.de)  
 
-**Jan Meischner**  
+**[Jan Meischner](https://jmeischner.com)**  
 _Research Coordinator_  
 [jan.meischner@uni-rostock.de](mailto:jan.meischner@uni-rostock.de)  
 
