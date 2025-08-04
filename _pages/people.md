@@ -9,7 +9,7 @@ redirect_from:
 
 ## Team – University of Rostock
 
-<table border="0" style="border-collapse:collapse;">
+<table border="0" style="border-collapse:collapse;font-size:1rem; line-height:1.5;">
 <tr>
   <td style="border:none; vertical-align:top;">
     <b>Corinna Burmeister</b><br/>
@@ -25,7 +25,10 @@ redirect_from:
     <a href="mailto:jan.meischner@uni-rostock.de">jan.meischner@uni-rostock.de</a>
   </td>
   <td style="vertical-align:top; text-align:right;">
-    <img src="../images/jmeischner.jpg" alt="Jan Meischner" height="150" style="height:150px; width:auto; max-width:150px; border-radius:50%; margin-left:1em;"/>
+  <a href="https://jmeischner.com" target="_blank" rel="noopener">
+    <img src="../images/jmeischner.jpg" alt="Jan Meischner"
+         style="height:150px; width:auto; max-width:150px; border-radius:50%; margin-left:1em;" />
+  </a>
   </td>
 </tr>
 <tr>
@@ -59,7 +62,7 @@ redirect_from:
 
 ## Co-Supervision – University of Copenhagen
 
-<table border="0" style="border-collapse:collapse;">
+<table border="0" style="border-collapse:collapse;font-size:1rem; line-height:1.5;">
 <tr>
   <td style="border:none; vertical-align:top;">
     <b><a href="https://researchprofiles.ku.dk/en/persons/hui-zhang">Hui Zhang</a></b><br/>
