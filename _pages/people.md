@@ -15,7 +15,11 @@ _Team Assistant_
 
 **[Jan Meischner](https://jmeischner.com)**  
 _Research Coordinator_  
-[jan.meischner@uni-rostock.de](mailto:jan.meischner@uni-rostock.de)  
+[jan.meischner@uni-rostock.de](mailto:jan.meischner@uni-rostock.de) 
+<div class="author__avatar">
+    <img src="../images/jmeischner.jpg" class="author__avatar" alt="Jan Meischner"  fetchpriority="high" height="150"/>
+</div>
+
 
 **Ayush Prasad**  
 _PhD Student_  
