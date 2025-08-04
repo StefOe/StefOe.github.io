@@ -25,7 +25,7 @@ redirect_from:
     <a href="mailto:jan.meischner@uni-rostock.de">jan.meischner@uni-rostock.de</a>
   </td>
   <td style="vertical-align:top; text-align:right;">
-    <img src="../images/jmeischner.jpg" alt="Jan Meischner" height="150" style="border-radius:50%; margin-left:1em;"/>
+    <img src="../images/jmeischner.jpg" alt="Jan Meischner" height="150" style="height:150px; width:auto; max-width:150px; border-radius:50%; margin-left:1em;"/>
   </td>
 </tr>
 <tr>
