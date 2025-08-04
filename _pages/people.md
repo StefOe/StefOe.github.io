@@ -9,37 +9,70 @@ redirect_from:
 
 ## Team – University of Rostock
 
-**Corinna Burmeister**  
-_Team Assistant_  
-[corinna.burmeister@uni-rostock.de](mailto:corinna.burmeister@uni-rostock.de)  
-
-**[Jan Meischner](https://jmeischner.com)**  
-_Research Coordinator_  
-[jan.meischner@uni-rostock.de](mailto:jan.meischner@uni-rostock.de) 
-<div class="author__avatar">
-    <img src="../images/jmeischner.jpg" class="author__avatar" alt="Jan Meischner"  fetchpriority="high" height="150"/>
-</div>
-
-
-**Ayush Prasad**  
-_PhD Student_  
-[ayush.prasad@uni-rostock.de](mailto:ayush.prasad@uni-rostock.de)  
-
-**Torben Globisch**  
-_PhD Student_  
-[torben.globisch@uni-rostock.de](mailto:torben.globisch@uni-rostock.de)  
-
-**Pratham Tatraiya**  
-_Research Assistant_  
-[pratham.tatraiya@uni-rostock.de](mailto:pratham.tatraiya@uni-rostock.de)
+<table border="0" style="border-collapse:collapse;">
+<tr>
+  <td style="border:none; vertical-align:top;">
+    <b>Corinna Burmeister</b><br/>
+    <i>Team Assistant</i><br/>
+    <a href="mailto:corinna.burmeister@uni-rostock.de">corinna.burmeister@uni-rostock.de</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td style="border:none; vertical-align:top;">
+    <b><a href="https://jmeischner.com">Jan Meischner</a></b><br/>
+    <i>Research Coordinator</i><br/>
+    <a href="mailto:jan.meischner@uni-rostock.de">jan.meischner@uni-rostock.de</a>
+  </td>
+  <td style="vertical-align:top; text-align:right;">
+    <img src="../images/jmeischner.jpg" alt="Jan Meischner" height="150" style="border-radius:50%; margin-left:1em;"/>
+  </td>
+</tr>
+<tr>
+  <td style="border:none; vertical-align:top;">
+    <b>Ayush Prasad</b><br/>
+    <i>PhD Student</i><br/>
+    <a href="mailto:ayush.prasad@uni-rostock.de">ayush.prasad@uni-rostock.de</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td style="border:none; vertical-align:top;">
+    <b>Torben Globisch</b><br/>
+    <i>PhD Student</i><br/>
+    <a href="mailto:torben.globisch@uni-rostock.de">torben.globisch@uni-rostock.de</a>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td style="border:none; vertical-align:top;">
+    <b>Pratham Tatraiya</b><br/>
+    <i>Research Assistant</i><br/>
+    <a href="mailto:pratham.tatraiya@uni-rostock.de">pratham.tatraiya@uni-rostock.de</a>
+  </td>
+  <td></td>
+</tr>
+</table>
 
 
 ---
 
 ## Co-Supervision – University of Copenhagen
 
-**[Hui Zhang](https://researchprofiles.ku.dk/en/persons/hui-zhang)**  
-_PhD Student_  
+<table border="0" style="border-collapse:collapse;">
+<tr>
+  <td style="border:none; vertical-align:top;">
+    <b><a href="https://researchprofiles.ku.dk/en/persons/hui-zhang">Hui Zhang</a></b><br/>
+    <i>PhD Student</i>
+  </td>
+  <td></td>
+</tr>
+<tr>
+  <td style="border:none; vertical-align:top;">
+    <b><a href="https://researchprofiles.ku.dk/en/persons/venkanna-babu-guthula">Venkanna Guthula</a></b><br/>
+    <i>PhD Student</i>
+  </td>
+  <td></td>
+</tr>
+</table>
 
-**[Venkanna Guthula](https://researchprofiles.ku.dk/en/persons/venkanna-babu-guthula)**  
-_PhD Student_  
