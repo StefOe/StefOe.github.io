@@ -21,15 +21,15 @@ Machine learning for spatio-temporal data, Earth observation, sustainability, an
 
 **Assistant Professor**, University of Copenhagen, Department of Computer Science, Denmark  
 12-2023 – Present (secondary employment)
-*Global Wetland Center (Novo Nordisk Foundation)*  
+*[Global Wetland Center](https://globalwetlandcenter.ku.dk/) (Novo Nordisk Foundation)*  
 
 **Assistant Professor**, University of Copenhagen, Department of Computer Science, Denmark  
 12-2022 – 11-2023  
-*Project: PerformLCA; Teaching in Data Science Lab*  
+*Project: PerformLCA; Teaching in [Data Science Lab](https://datalab.science.ku.dk/english/)*  
 
 **PostDoc**, University of Copenhagen, Department of Computer Science, Denmark  
 12-2020 – 11-2022  
-*Projects: FirePrev, DeReEco, Big Satellite Monitoring (DFF)*  
+    *Projects: FirePrev, [DeReEco](https://ai.ku.dk/research/research-projects/dereeco/), Monitoring Changes in Big Satellite Data via Massively-Parallel Artificial Intelligence (DFF 9131-00110B)*  
 
 **PostDoc**, University of Copenhagen, Department of Computer Science, Denmark  
 12-2018 – 11-2020  
