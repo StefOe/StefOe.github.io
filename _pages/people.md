@@ -14,7 +14,7 @@ redirect_from:
   <td style="border:none; vertical-align:top;">
     <b>Corinna Burmeister</b><br/>
     <i>Team Assistant</i><br/>
-    <a href="mailto:corinna.burmeister@uni-rostock.de">corinna.burmeister@uni-rostock.de</a>
+    <a>corinna.burmeister[at]uni-rostock.de</a>
   </td>
   <td style="border:none;"></td>
 </tr>
@@ -22,7 +22,7 @@ redirect_from:
   <td style="border:none; vertical-align:top;">
     <b><a href="https://jmeischner.com">Jan Meischner</a></b><br/>
     <i>Research Coordinator</i><br/>
-    <a href="mailto:jan.meischner@uni-rostock.de">jan.meischner@uni-rostock.de</a>
+    <a>jan.meischner[at]uni-rostock.de</a>
   </td>
   <td style="border:none; vertical-align:top; text-align:right;">
     <a href="https://jmeischner.com" target="_blank" rel="noopener">
@@ -35,7 +35,7 @@ redirect_from:
   <td style="border:none; vertical-align:top;">
     <b>Ayush Prasad</b><br/>
     <i>PhD Student</i><br/>
-    <a href="mailto:ayush.prasad@uni-rostock.de">ayush.prasad@uni-rostock.de</a>
+    <a>ayush.prasad[at]uni-rostock.de</a>
   </td>
   <td style="border:none;"></td>
 </tr>
@@ -43,7 +43,7 @@ redirect_from:
   <td style="border:none; vertical-align:top;">
     <b>Torben Globisch</b><br/>
     <i>PhD Student</i><br/>
-    <a href="mailto:torben.globisch@uni-rostock.de">torben.globisch@uni-rostock.de</a>
+    <a>torben.globisch[at]uni-rostock.de</a>
   </td>
   <td style="border:none;"></td>
 </tr>
@@ -51,7 +51,7 @@ redirect_from:
   <td style="border:none; vertical-align:top;">
     <b>Pratham Tatraiya</b><br/>
     <i>Research Assistant</i><br/>
-    <a href="mailto:pratham.tatraiya@uni-rostock.de">pratham.tatraiya@uni-rostock.de</a>
+    <a>pratham.tatraiya[at]uni-rostock.de</a>
   </td>
   <td style="border:none;"></td>
 </tr>
