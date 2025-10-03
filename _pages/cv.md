@@ -20,16 +20,16 @@ Machine learning for spatio-temporal data, Earth observation, sustainability, an
 *Chair of 'Visual and Analytic Computing in Ocean Technologies'*  
 
 **Assistant Professor**, University of Copenhagen, Department of Computer Science, Denmark  
-12-2023 – Present  
-*Global Wetland Center (Novo Nordisk Foundation)*  
+12-2023 – Present (secondary employment)
+*[Global Wetland Center](https://globalwetlandcenter.ku.dk/) (Novo Nordisk Foundation)*  
 
 **Assistant Professor**, University of Copenhagen, Department of Computer Science, Denmark  
 12-2022 – 11-2023  
-*Project: PerformLCA; Teaching in Data Science Lab*  
+*Project: PerformLCA; Teaching in [Data Science Lab](https://datalab.science.ku.dk/english/)*  
 
 **PostDoc**, University of Copenhagen, Department of Computer Science, Denmark  
 12-2020 – 11-2022  
-*Projects: FirePrev, DeReEco, Big Satellite Monitoring (DFF)*  
+    *Projects: FirePrev, [DeReEco](https://ai.ku.dk/research/research-projects/dereeco/), Monitoring Changes in Big Satellite Data via Massively-Parallel Artificial Intelligence (DFF 9131-00110B)*  
 
 **PostDoc**, University of Copenhagen, Department of Computer Science, Denmark  
 12-2018 – 11-2020  
@@ -43,6 +43,7 @@ Machine learning for spatio-temporal data, Earth observation, sustainability, an
 ## Teaching Experience
 
 ### University of Rostock
+- **Data Science Course** (starting 10.2025): Lectures on Data Science and ML foundations
 - **Deep Learning for Maritime Vision Applications** (starting 10.2025): Seminar and lectures introducing deep learning 
 
 ### University of Copenhagen
@@ -68,10 +69,10 @@ Machine learning for spatio-temporal data, Earth observation, sustainability, an
 ## Awards & Scholarships
 - 2016: *Travel Grant*, IEEE WCCI
 - 2015: *Best Presentation*, KI 2015
-- 2014-2017: *Ph.D. Scholarship*, SAMS
+- 2014-2017: *Ph.D. Scholarship*, [SAMS](https://uol.de/sams)
 
 ## Committees & Service
-- since 2025: *Journal Editor*, Künstliche Intelligenz (KUIN)
+- since 08.2025: *Journal Editor*, Künstliche Intelligenz (KUIN)
 - 2022: *Workshop Organizer*, Pioneer Centre for AI
 - 2019: *Editorial Manager*, Künstliche Intelligenz (KUIN)
 - 2019: *Program-Committee Member*, ICANN

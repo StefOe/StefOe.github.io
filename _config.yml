@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Stefan Oehmcke"
+title                    : "Earth & Ocean ML"
 title_separator          : "-"
 name                     : &name "Stefan Oehmcke"
 description              : &description "Professor for Visual and Analytic Computing in Ocean Technologies (VACOT), University of Rostock"
@@ -32,7 +32,7 @@ author:
   employer_uri     : "https://www.ief.uni-rostock.de/fakultaet/institute-und-lehrstuehle/lehrende/institute/visual-and-analytic-computing/jun-prof-dr-rer-nat-stefan-oehmcke/"
   employer_logo    : "URO.svg"
   #uri              : ""
-  email            : "stefan.oehmcke@uni-rostock.de"
+  email            : "stefan.oehmcke[at]uni-rostock.de"
 
   # Academic websites
   academia         : # URL
