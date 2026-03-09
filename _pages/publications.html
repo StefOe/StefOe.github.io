@@ -129,14 +129,30 @@ author_profile: true
             ? String(id["external-id-url"].value).toLowerCase()
             : "";
 
-        if (type === "arxiv" || value.indexOf("arxiv") !== -1 || url.indexOf("arxiv.org") !== -1) {
+        if (
+          type === "arxiv" ||
+          value.indexOf("arxiv") !== -1 ||
+          value.indexOf("ssrn") !== -1 ||
+          value.indexOf("research square") !== -1 ||
+          value.indexOf("researchsquare") !== -1 ||
+          url.indexOf("arxiv.org") !== -1 ||
+          url.indexOf("ssrn.com") !== -1 ||
+          url.indexOf("researchsquare.com") !== -1
+        ) {
           return true;
         }
       }
 
       var title = getTitle(summary).toLowerCase();
       var venue = getVenue(summary).toLowerCase();
-      return title.indexOf("arxiv") !== -1 || venue.indexOf("arxiv") !== -1;
+      return (
+        title.indexOf("arxiv") !== -1 ||
+        title.indexOf("ssrn") !== -1 ||
+        title.indexOf("research square") !== -1 ||
+        venue.indexOf("arxiv") !== -1 ||
+        venue.indexOf("ssrn") !== -1 ||
+        venue.indexOf("research square") !== -1
+      );
     }
 
     function getCategory(summary) {
@@ -183,6 +199,15 @@ author_profile: true
             return "https://arxiv.org/abs/" + encodeURIComponent(value);
           }
         }
+
+        if (type === "ssrn") {
+          if (url) {
+            return url;
+          }
+          if (value) {
+            return "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=" + encodeURIComponent(value);
+          }
+        }
       }
 
       for (var j = 0; j < ids.length; j++) {
@@ -191,7 +216,14 @@ author_profile: true
           id2["external-id-url"] && id2["external-id-url"].value
             ? String(id2["external-id-url"].value)
             : "";
-        if (url2 && url2.toLowerCase().indexOf("arxiv.org") !== -1) {
+        if (
+          url2 &&
+          (
+            url2.toLowerCase().indexOf("arxiv.org") !== -1 ||
+            url2.toLowerCase().indexOf("ssrn.com") !== -1 ||
+            url2.toLowerCase().indexOf("researchsquare.com") !== -1
+          )
+        ) {
           return url2;
         }
       }
