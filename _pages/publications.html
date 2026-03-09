@@ -5,32 +5,250 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
+{% if site.author.googlescholar or site.author.scopus %}
+<p class="wordwrap">
+  External profiles:
+  {% if site.author.googlescholar %}
+  <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar</a>
+  {% endif %}
+  {% if site.author.googlescholar and site.author.scopus %}
+  |
+  {% endif %}
+  {% if site.author.scopus %}
+  <a href="{{ site.author.scopus }}" target="_blank" rel="noopener">Scopus</a>
+  {% endif %}
+</p>
 {% endif %}
 
+{% if site.author.orcid %}
+<h2>Publications (Auto-synced from ORCID)</h2>
+<div id="orcid-publications-status">Loading publications from ORCID...</div>
+<div id="orcid-publications-groups"></div>
+{% endif %}
 
+<div id="local-publications-fallback">
+  <h2>Local Publications</h2>
+  <p class="wordwrap">Shown as fallback when live ORCID loading is unavailable.</p>
 
+  <!-- New style rendering if publication categories are defined -->
+  {% if site.publication_category %}
+    {% for category in site.publication_category  %}
+      {% assign title_shown = false %}
+      {% for post in site.publications reversed %}
+        {% if post.category != category[0] %}
+          {% continue %}
+        {% endif %}
+        {% unless title_shown %}
+          <h3>{{ category[1].title }}</h3><hr />
+          {% assign title_shown = true %}
+        {% endunless %}
+        {% include archive-single.html %}
+      {% endfor %}
+    {% endfor %}
+  {% else %}
+    {% for post in site.publications reversed %}
+      {% include archive-single.html %}
+    {% endfor %}
+  {% endif %}
+</div>
+
+{% if site.author.orcid %}
+<script>
+  (function () {
+    var orcidUrl = "{{ site.author.orcid | escape }}";
+    var match = orcidUrl.match(/(\d{4}-\d{4}-\d{4}-\d{3}[\dX])/i);
+    if (!match) {
+      return;
+    }
+
+    var orcidId = match[1];
+    var statusEl = document.getElementById("orcid-publications-status");
+    var groupsEl = document.getElementById("orcid-publications-groups");
+    var fallbackEl = document.getElementById("local-publications-fallback");
+
+    function textOrDefault(value, fallback) {
+      return value && String(value).trim() ? value : fallback;
+    }
+
+    function getYear(summary) {
+      try {
+        return parseInt(summary["publication-date"].year.value, 10);
+      } catch (e) {
+        return 0;
+      }
+    }
+
+    function getTitle(summary) {
+      return textOrDefault(
+        summary.title && summary.title.title && summary.title.title.value,
+        "Untitled publication"
+      );
+    }
+
+    function getVenue(summary) {
+      return textOrDefault(
+        summary["journal-title"] && summary["journal-title"].value,
+        ""
+      );
+    }
+
+    function getDoi(summary) {
+      var ids = summary["external-ids"] && summary["external-ids"]["external-id"];
+      if (!Array.isArray(ids)) {
+        return "";
+      }
+
+      for (var i = 0; i < ids.length; i++) {
+        var id = ids[i];
+        if (!id || !id["external-id-type"] || !id["external-id-value"]) {
+          continue;
+        }
+        if (String(id["external-id-type"]).toLowerCase() === "doi") {
+          return id["external-id-value"];
+        }
+      }
+
+      return "";
+    }
+
+    function getCategory(summary) {
+      var type = String(summary.type || "").toLowerCase();
+
+      if (type === "journal-article") {
+        return "journal";
+      }
+
+      if (type.indexOf("conference-") === 0) {
+        return "conference";
+      }
+
+      if (type === "preprint" || type === "working-paper") {
+        return "preprint";
+      }
+
+      return "other";
+    }
+
+    function renderItem(summary) {
+      var title = getTitle(summary);
+      var venue = getVenue(summary);
+      var year = getYear(summary);
+      var doi = getDoi(summary);
+      var li = document.createElement("li");
+
+      var strong = document.createElement("strong");
+      strong.textContent = title;
+      li.appendChild(strong);
+
+      if (venue) {
+        li.appendChild(document.createTextNode(" | " + venue));
+      }
+
+      if (year) {
+        li.appendChild(document.createTextNode(" | " + String(year)));
+      }
+
+      if (doi) {
+        var doiUrl = "https://doi.org/" + encodeURIComponent(doi);
+        var doiLink = document.createElement("a");
+        doiLink.href = doiUrl;
+        doiLink.target = "_blank";
+        doiLink.rel = "noopener";
+        doiLink.textContent = "DOI";
+        li.appendChild(document.createTextNode(" | "));
+        li.appendChild(doiLink);
+      }
+
+      return li;
+    }
+
+    function renderCategory(title, items) {
+      if (!items.length) {
+        return null;
+      }
+
+      var wrapper = document.createElement("div");
+      var heading = document.createElement("h3");
+      var list = document.createElement("ol");
+      heading.textContent = title;
+      wrapper.appendChild(heading);
+      wrapper.appendChild(list);
+
+      for (var i = 0; i < items.length; i++) {
+        list.appendChild(renderItem(items[i]));
+      }
+
+      return wrapper;
+    }
+
+    fetch("https://pub.orcid.org/v3.0/" + orcidId + "/works", {
+      headers: { Accept: "application/json" }
+    })
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error("ORCID API responded with " + response.status);
+        }
+        return response.json();
+      })
+      .then(function (data) {
+        var groups = (data && data.group) || [];
+        var summaries = [];
+
+        for (var i = 0; i < groups.length; i++) {
+          var group = groups[i];
+          if (group["work-summary"] && group["work-summary"].length) {
+            summaries.push(group["work-summary"][0]);
+          }
+        }
+
+        summaries.sort(function (a, b) {
+          return getYear(b) - getYear(a);
+        });
+
+        if (!summaries.length) {
+          throw new Error("No ORCID works found");
+        }
+
+        var buckets = {
+          journal: [],
+          conference: [],
+          preprint: [],
+          other: []
+        };
+
+        for (var j = 0; j < summaries.length; j++) {
+          var category = getCategory(summaries[j]);
+          buckets[category].push(summaries[j]);
+        }
+
+        groupsEl.innerHTML = "";
+
+        var sections = [
+          ["Journal Articles", buckets.journal],
+          ["Conference Articles", buckets.conference],
+          ["Preprints", buckets.preprint],
+          ["Other", buckets.other]
+        ];
+
+        var renderedCount = 0;
+        for (var k = 0; k < sections.length; k++) {
+          var section = renderCategory(sections[k][0], sections[k][1]);
+          if (section) {
+            groupsEl.appendChild(section);
+            renderedCount += sections[k][1].length;
+          }
+        }
+
+        statusEl.textContent = "Showing " + renderedCount + " publications from ORCID, grouped by type.";
+        if (fallbackEl) {
+          fallbackEl.style.display = "none";
+        }
+      })
+      .catch(function () {
+        statusEl.textContent = "Could not load ORCID publications right now. Showing local list below.";
+      });
+  })();
+</script>
+{% endif %}
