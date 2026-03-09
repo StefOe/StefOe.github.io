@@ -199,6 +199,201 @@ author_profile: true
       return "";
     }
 
+    function normalizeTitle(title) {
+      return String(title || "")
+        .toLowerCase()
+        .replace(/&/g, " and ")
+        .replace(/[^a-z0-9\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function getTitleTokens(title) {
+      var normalized = normalizeTitle(title);
+      if (!normalized) {
+        return [];
+      }
+
+      var raw = normalized.split(" ");
+      var stopWords = {
+        a: true,
+        an: true,
+        and: true,
+        as: true,
+        at: true,
+        by: true,
+        for: true,
+        from: true,
+        in: true,
+        of: true,
+        on: true,
+        or: true,
+        the: true,
+        to: true,
+        using: true,
+        with: true
+      };
+
+      var tokens = [];
+      for (var i = 0; i < raw.length; i++) {
+        var token = raw[i];
+        if (!token || token.length < 3 || stopWords[token]) {
+          continue;
+        }
+        tokens.push(token);
+      }
+
+      return tokens;
+    }
+
+    function tokenSet(tokens) {
+      var set = {};
+      for (var i = 0; i < tokens.length; i++) {
+        set[tokens[i]] = true;
+      }
+      return set;
+    }
+
+    function jaccardScore(aTokens, bTokens) {
+      if (!aTokens.length || !bTokens.length) {
+        return 0;
+      }
+
+      var aSet = tokenSet(aTokens);
+      var bSet = tokenSet(bTokens);
+      var intersection = 0;
+      var union = 0;
+      var key;
+
+      for (key in aSet) {
+        if (Object.prototype.hasOwnProperty.call(aSet, key)) {
+          union += 1;
+          if (bSet[key]) {
+            intersection += 1;
+          }
+        }
+      }
+
+      for (key in bSet) {
+        if (Object.prototype.hasOwnProperty.call(bSet, key) && !aSet[key]) {
+          union += 1;
+        }
+      }
+
+      return union ? intersection / union : 0;
+    }
+
+    function overlapScore(aTokens, bTokens) {
+      if (!aTokens.length || !bTokens.length) {
+        return 0;
+      }
+
+      var aSet = tokenSet(aTokens);
+      var bSet = tokenSet(bTokens);
+      var intersection = 0;
+      var key;
+
+      for (key in aSet) {
+        if (Object.prototype.hasOwnProperty.call(aSet, key) && bSet[key]) {
+          intersection += 1;
+        }
+      }
+
+      var minSize = Math.min(Object.keys(aSet).length, Object.keys(bSet).length);
+      return minSize ? intersection / minSize : 0;
+    }
+
+    function levenshteinDistance(a, b) {
+      var s = normalizeTitle(a);
+      var t = normalizeTitle(b);
+      if (!s) {
+        return t.length;
+      }
+      if (!t) {
+        return s.length;
+      }
+
+      var prev = [];
+      var curr = [];
+      var i;
+      var j;
+
+      for (j = 0; j <= t.length; j++) {
+        prev[j] = j;
+      }
+
+      for (i = 1; i <= s.length; i++) {
+        curr[0] = i;
+        for (j = 1; j <= t.length; j++) {
+          var cost = s.charAt(i - 1) === t.charAt(j - 1) ? 0 : 1;
+          curr[j] = Math.min(
+            prev[j] + 1,
+            curr[j - 1] + 1,
+            prev[j - 1] + cost
+          );
+        }
+        var tmp = prev;
+        prev = curr;
+        curr = tmp;
+      }
+
+      return prev[t.length];
+    }
+
+    function titleSimilarity(aTitle, bTitle) {
+      var aNorm = normalizeTitle(aTitle);
+      var bNorm = normalizeTitle(bTitle);
+      if (!aNorm || !bNorm) {
+        return 0;
+      }
+      if (aNorm === bNorm) {
+        return 1;
+      }
+
+      var aTokens = getTitleTokens(aNorm);
+      var bTokens = getTitleTokens(bNorm);
+      var jaccard = jaccardScore(aTokens, bTokens);
+      var overlap = overlapScore(aTokens, bTokens);
+      var distance = levenshteinDistance(aNorm, bNorm);
+      var maxLen = Math.max(aNorm.length, bNorm.length) || 1;
+      var editSimilarity = 1 - distance / maxLen;
+
+      return Math.max(
+        jaccard,
+        overlap * 0.95,
+        editSimilarity * 0.8
+      );
+    }
+
+    function chooseBestPreprintMatch(entry, preprintEntries) {
+      var targetYear = getYear(entry.summary);
+      var targetTitle = getTitle(entry.summary);
+      var best = null;
+      var bestScore = 0;
+
+      for (var i = 0; i < preprintEntries.length; i++) {
+        var candidate = preprintEntries[i];
+        var candidateTitle = getTitle(candidate.summary);
+        var score = titleSimilarity(targetTitle, candidateTitle);
+        var yearGap = Math.abs(targetYear - getYear(candidate.summary));
+
+        if (yearGap > 3) {
+          score *= 0.8;
+        }
+
+        if (score > bestScore) {
+          bestScore = score;
+          best = candidate;
+        }
+      }
+
+      if (bestScore >= 0.72 || (bestScore >= 0.62 && targetYear > 0)) {
+        return best;
+      }
+
+      return null;
+    }
+
     function selectPrimarySummary(summaries) {
       var best = null;
       var bestRank = -1;
@@ -261,6 +456,25 @@ author_profile: true
           category: primaryCategory,
           preprintUrl: preprintUrl
         });
+      }
+
+      var preprints = [];
+      for (var k = 0; k < entries.length; k++) {
+        if (entries[k].category === "preprint") {
+          preprints.push(entries[k]);
+        }
+      }
+
+      for (var m = 0; m < entries.length; m++) {
+        var entry = entries[m];
+        if (entry.category === "preprint" || entry.preprintUrl || !preprints.length) {
+          continue;
+        }
+
+        var bestPreprint = chooseBestPreprintMatch(entry, preprints);
+        if (bestPreprint) {
+          entry.preprintUrl = bestPreprint.preprintUrl || getPreprintLink(bestPreprint.summary);
+        }
       }
 
       return entries;
