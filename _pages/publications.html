@@ -113,6 +113,32 @@ author_profile: true
       return "";
     }
 
+    function getExternalIds(summary) {
+      var ids = summary["external-ids"] && summary["external-ids"]["external-id"];
+      return Array.isArray(ids) ? ids : [];
+    }
+
+    function looksLikeArxiv(summary) {
+      var ids = getExternalIds(summary);
+      for (var i = 0; i < ids.length; i++) {
+        var id = ids[i] || {};
+        var type = String(id["external-id-type"] || "").toLowerCase();
+        var value = String(id["external-id-value"] || "").toLowerCase();
+        var url =
+          id["external-id-url"] && id["external-id-url"].value
+            ? String(id["external-id-url"].value).toLowerCase()
+            : "";
+
+        if (type === "arxiv" || value.indexOf("arxiv") !== -1 || url.indexOf("arxiv.org") !== -1) {
+          return true;
+        }
+      }
+
+      var title = getTitle(summary).toLowerCase();
+      var venue = getVenue(summary).toLowerCase();
+      return title.indexOf("arxiv") !== -1 || venue.indexOf("arxiv") !== -1;
+    }
+
     function getCategory(summary) {
       var type = String(summary.type || "").toLowerCase();
 
@@ -124,14 +150,124 @@ author_profile: true
         return "conference";
       }
 
-      if (type === "preprint" || type === "working-paper") {
+      if (
+        type === "preprint" ||
+        type === "pre-print" ||
+        type === "working-paper" ||
+        type === "posted-content" ||
+        looksLikeArxiv(summary)
+      ) {
         return "preprint";
       }
 
       return "other";
     }
 
-    function renderItem(summary) {
+    function getPreprintLink(summary) {
+      var ids = getExternalIds(summary);
+
+      for (var i = 0; i < ids.length; i++) {
+        var id = ids[i] || {};
+        var type = String(id["external-id-type"] || "").toLowerCase();
+        var value = String(id["external-id-value"] || "");
+        var url =
+          id["external-id-url"] && id["external-id-url"].value
+            ? String(id["external-id-url"].value)
+            : "";
+
+        if (type === "arxiv") {
+          if (url) {
+            return url;
+          }
+          if (value) {
+            return "https://arxiv.org/abs/" + encodeURIComponent(value);
+          }
+        }
+      }
+
+      for (var j = 0; j < ids.length; j++) {
+        var id2 = ids[j] || {};
+        var url2 =
+          id2["external-id-url"] && id2["external-id-url"].value
+            ? String(id2["external-id-url"].value)
+            : "";
+        if (url2 && url2.toLowerCase().indexOf("arxiv.org") !== -1) {
+          return url2;
+        }
+      }
+
+      return "";
+    }
+
+    function selectPrimarySummary(summaries) {
+      var best = null;
+      var bestRank = -1;
+
+      for (var i = 0; i < summaries.length; i++) {
+        var summary = summaries[i];
+        var category = getCategory(summary);
+        var rank = 0;
+
+        if (category === "journal") {
+          rank = 4;
+        } else if (category === "conference") {
+          rank = 3;
+        } else if (category === "other") {
+          rank = 2;
+        } else if (category === "preprint") {
+          rank = 1;
+        }
+
+        if (rank > bestRank) {
+          best = summary;
+          bestRank = rank;
+        }
+      }
+
+      return best;
+    }
+
+    function buildEntriesFromGroups(groups) {
+      var entries = [];
+
+      for (var i = 0; i < groups.length; i++) {
+        var group = groups[i] || {};
+        var summaries = group["work-summary"] || [];
+        if (!summaries.length) {
+          continue;
+        }
+
+        var primary = selectPrimarySummary(summaries);
+        if (!primary) {
+          continue;
+        }
+
+        var primaryCategory = getCategory(primary);
+        var preprintUrl = "";
+
+        for (var j = 0; j < summaries.length; j++) {
+          var candidate = summaries[j];
+          if (getCategory(candidate) === "preprint") {
+            var maybeUrl = getPreprintLink(candidate);
+            if (maybeUrl) {
+              preprintUrl = maybeUrl;
+              break;
+            }
+          }
+        }
+
+        entries.push({
+          summary: primary,
+          category: primaryCategory,
+          preprintUrl: preprintUrl
+        });
+      }
+
+      return entries;
+    }
+
+    function renderItem(entry) {
+      var summary = entry.summary;
       var title = getTitle(summary);
       var venue = getVenue(summary);
       var year = getYear(summary);
@@ -159,6 +295,16 @@ author_profile: true
         doiLink.textContent = "DOI";
         li.appendChild(document.createTextNode(" | "));
         li.appendChild(doiLink);
+      }
+
+      if (entry.preprintUrl && entry.category !== "preprint") {
+        var preprintLink = document.createElement("a");
+        preprintLink.href = entry.preprintUrl;
+        preprintLink.target = "_blank";
+        preprintLink.rel = "noopener";
+        preprintLink.textContent = "Preprint";
+        li.appendChild(document.createTextNode(" | "));
+        li.appendChild(preprintLink);
       }
 
       return li;
@@ -194,20 +340,13 @@ author_profile: true
       })
       .then(function (data) {
         var groups = (data && data.group) || [];
-        var summaries = [];
+        var entries = buildEntriesFromGroups(groups);
 
-        for (var i = 0; i < groups.length; i++) {
-          var group = groups[i];
-          if (group["work-summary"] && group["work-summary"].length) {
-            summaries.push(group["work-summary"][0]);
-          }
-        }
-
-        summaries.sort(function (a, b) {
-          return getYear(b) - getYear(a);
+        entries.sort(function (a, b) {
+          return getYear(b.summary) - getYear(a.summary);
         });
 
-        if (!summaries.length) {
+        if (!entries.length) {
           throw new Error("No ORCID works found");
         }
 
@@ -218,9 +357,8 @@ author_profile: true
           other: []
         };
 
-        for (var j = 0; j < summaries.length; j++) {
-          var category = getCategory(summaries[j]);
-          buckets[category].push(summaries[j]);
+        for (var j = 0; j < entries.length; j++) {
+          buckets[entries[j].category].push(entries[j]);
         }
 
         groupsEl.innerHTML = "";
