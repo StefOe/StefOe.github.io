@@ -155,11 +155,55 @@ author_profile: true
       );
     }
 
+    function isEguOrAguMeeting(summary) {
+      var title = getTitle(summary).toLowerCase();
+      var venue = getVenue(summary).toLowerCase();
+
+      return (
+        venue.indexOf("egu") !== -1 ||
+        venue.indexOf("agu") !== -1 ||
+        venue.indexOf("european geosciences union") !== -1 ||
+        venue.indexOf("american geophysical union") !== -1 ||
+        venue.indexOf("general assembly") !== -1 ||
+        venue.indexOf("fall meeting") !== -1 ||
+        title.indexOf("egu") !== -1 ||
+        title.indexOf("agu") !== -1 ||
+        title.indexOf("european geosciences union") !== -1 ||
+        title.indexOf("american geophysical union") !== -1
+      );
+    }
+
+    function shouldExcludeSummary(summary) {
+      var type = String(summary.type || "").toLowerCase();
+      var title = getTitle(summary).toLowerCase();
+      var venue = getVenue(summary).toLowerCase();
+
+      if (
+        type === "conference-abstract" ||
+        type === "meeting-abstract"
+      ) {
+        return true;
+      }
+
+      return (
+        title.indexOf("extended abstract") !== -1 ||
+        title.indexOf("conference abstract") !== -1 ||
+        title.indexOf("meeting abstract") !== -1 ||
+        venue.indexOf("extended abstract") !== -1 ||
+        venue.indexOf("conference abstract") !== -1 ||
+        venue.indexOf("meeting abstract") !== -1
+      );
+    }
+
     function getCategory(summary) {
       var type = String(summary.type || "").toLowerCase();
 
       if (type === "journal-article") {
         return "journal";
+      }
+
+      if (isEguOrAguMeeting(summary)) {
+        return "other";
       }
 
       if (type.indexOf("conference-") === 0) {
@@ -459,7 +503,16 @@ author_profile: true
 
       for (var i = 0; i < groups.length; i++) {
         var group = groups[i] || {};
-        var summaries = group["work-summary"] || [];
+        var rawSummaries = group["work-summary"] || [];
+        var summaries = [];
+        var s;
+
+        for (s = 0; s < rawSummaries.length; s++) {
+          if (!shouldExcludeSummary(rawSummaries[s])) {
+            summaries.push(rawSummaries[s]);
+          }
+        }
+
         if (!summaries.length) {
           continue;
         }
