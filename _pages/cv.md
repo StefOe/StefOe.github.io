@@ -15,25 +15,33 @@ _Assistant Professor_
 Machine learning for spatio-temporal data, Earth observation, sustainability, and maritime applications
 
 ## Work Experience
-**Tenure-Track Assistant Professor**, University of Rostock, Institute for Visual and Analytic Computing, Germany  
+**Tenure-Track Assistant Professor**, University of Rostock, Institute for [Visual and Analytic Computing](https://vac.uni-rostock.de/), Germany  
 10-2024 – Present  
 *Chair of 'Visual and Analytic Computing in Ocean Technologies'*  
 
 **Assistant Professor**, University of Copenhagen, Department of Computer Science, Denmark  
 12-2023 – Present (secondary employment)
-*[Global Wetland Center](https://globalwetlandcenter.ku.dk/) (Novo Nordisk Foundation)*  
+*Project*: 
+- [Global Wetland Center](https://globalwetlandcenter.ku.dk/) (Novo Nordisk Foundation)
 
 **Assistant Professor**, University of Copenhagen, Department of Computer Science, Denmark  
 12-2022 – 11-2023  
-*Project: PerformLCA; Teaching in [Data Science Lab](https://datalab.science.ku.dk/english/)*  
+*Projects*: 
+- PerformLCA (University of Copenhagen)
+- Teaching in [Data Science Lab](https://datalab.science.ku.dk/english/)
 
 **PostDoc**, University of Copenhagen, Department of Computer Science, Denmark  
 12-2020 – 11-2022  
-    *Projects: FirePrev, [DeReEco](https://ai.ku.dk/research/research-projects/dereeco/), Monitoring Changes in Big Satellite Data via Massively-Parallel Artificial Intelligence (DFF 9131-00110B)*  
+*Projects*: 
+- DeReEco: Deep Learning and Remote Sensing for Unlocking Global Ecosystem Resource Dynamics (Villum Synergy)
+- FirePrev: Aid to Prioritize Fire Prevention Efforts (EU Grant Agreement ECHO/SUB/2020/TRACK1/831639)
+- Monitoring Changes in Big Satellite Data via Massively-Parallel Artificial Intelligence (DFF 9131-00110B)
 
 **PostDoc**, University of Copenhagen, Department of Computer Science, Denmark  
 12-2018 – 11-2020  
-*Projects: IDAS and VELUX reading data analysis*  
+*Projects*: 
+- IDAS: Industrial Data Analysis Service (The Danish Industry Foundation)
+- Reading data analysis project (VELUX)  
 
 **PostDoc**, University of Oldenburg, Computational Intelligence Lab, Germany  
 01-2018 – 12-2018  
@@ -43,8 +51,9 @@ Machine learning for spatio-temporal data, Earth observation, sustainability, an
 ## Teaching Experience
 
 ### University of Rostock
-- **Data Science Course** (starting 10.2025): Lectures on Data Science and ML foundations
-- **Deep Learning for Maritime Vision Applications** (starting 10.2025): Seminar and lectures introducing deep learning 
+- **Data Science Course** Lectures on Data Science and ML foundations
+- **Deep Learning for Maritime Vision Applications**: Repeated M.Sc. seminar and lectures on applying ML techniques
+- **Marine Deep Learning**: Repeated B.Sc. seminar and lectures on ML and deep learning basics based on application example
 
 ### University of Copenhagen
 - **Machine Learning and Imaging Projects** (2022-2025): Individual supervision in ML project
