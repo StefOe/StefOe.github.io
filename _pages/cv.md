@@ -21,27 +21,47 @@ Machine learning for spatio-temporal data, Earth observation, sustainability, an
 
 **Assistant Professor**, University of Copenhagen, Department of Computer Science, Denmark  
 12-2023 – Present (secondary employment)
-*Project*: 
-- [Global Wetland Center](https://globalwetlandcenter.ku.dk/) (Novo Nordisk Foundation)
+
+<div class="cv-projects">
+  <div class="cv-projects__label">Project</div>
+  <ul>
+    <li><a href="https://globalwetlandcenter.ku.dk/">Global Wetland Center</a> <span class="cv-projects__meta">(Novo Nordisk Foundation)</span></li>
+  </ul>
+</div>
 
 **Assistant Professor**, University of Copenhagen, Department of Computer Science, Denmark  
 12-2022 – 11-2023  
-*Projects*: 
-- PerformLCA (University of Copenhagen)
-- Teaching in [Data Science Lab](https://datalab.science.ku.dk/english/)
+
+<div class="cv-projects">
+  <div class="cv-projects__label">Projects</div>
+  <ul>
+    <li>PerformLCA <span class="cv-projects__meta">(University of Copenhagen)</span></li>
+    <li>Teaching in <a href="https://datalab.science.ku.dk/english/">Data Science Lab</a></li>
+  </ul>
+</div>
 
 **PostDoc**, University of Copenhagen, Department of Computer Science, Denmark  
 12-2020 – 11-2022  
-*Projects*: 
-- DeReEco: Deep Learning and Remote Sensing for Unlocking Global Ecosystem Resource Dynamics (Villum Synergy)
-- FirePrev: Aid to Prioritize Fire Prevention Efforts (EU Grant Agreement ECHO/SUB/2020/TRACK1/831639)
-- Monitoring Changes in Big Satellite Data via Massively-Parallel Artificial Intelligence (DFF 9131-00110B)
+
+<div class="cv-projects">
+  <div class="cv-projects__label">Projects</div>
+  <ul>
+    <li>DeReEco: Deep Learning and Remote Sensing for Unlocking Global Ecosystem Resource Dynamics <span class="cv-projects__meta">(Villum Synergy)</span></li>
+    <li>FirePrev: Aid to Prioritize Fire Prevention Efforts <span class="cv-projects__meta">(EU Grant Agreement ECHO/SUB/2020/TRACK1/831639)</span></li>
+    <li>Monitoring Changes in Big Satellite Data via Massively-Parallel Artificial Intelligence <span class="cv-projects__meta">(DFF 9131-00110B)</span></li>
+  </ul>
+</div>
 
 **PostDoc**, University of Copenhagen, Department of Computer Science, Denmark  
 12-2018 – 11-2020  
-*Projects*: 
-- IDAS: Industrial Data Analysis Service (The Danish Industry Foundation)
-- Reading data analysis project (VELUX)  
+
+<div class="cv-projects">
+  <div class="cv-projects__label">Projects</div>
+  <ul>
+    <li>IDAS: Industrial Data Analysis Service <span class="cv-projects__meta">(The Danish Industry Foundation)</span></li>
+    <li>Reading data analysis project <span class="cv-projects__meta">(VELUX)</span></li>
+  </ul>
+</div>
 
 **PostDoc**, University of Oldenburg, Computational Intelligence Lab, Germany  
 01-2018 – 12-2018  
