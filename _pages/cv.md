@@ -50,7 +50,7 @@ Machine learning for spatio-temporal data, Earth observation, sustainability, an
 
 ## Teaching Experience
 
-### University of Rostock
+### University of Rostock (since 2025)
 - **Data Science Course** Lectures on Data Science and ML foundations
 - **Deep Learning for Maritime Vision Applications**: Repeated M.Sc. seminar and lectures on applying ML techniques
 - **Marine Deep Learning**: Repeated B.Sc. seminar and lectures on ML and deep learning basics based on application example
