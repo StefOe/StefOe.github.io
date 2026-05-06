@@ -9,18 +9,24 @@ redirect_from:
 
 {% include base_path %}
 
-_Assistant Professor_  
+_Tenure-track Assistant Professor for Visual and Analytic Computing in Ocean Technologies_
 
-## Research Interests
-Machine learning for spatio-temporal data, Earth observation, sustainability, and maritime applications
+## Research Profile
 
-## Work Experience
-**Tenure-Track Assistant Professor**, University of Rostock, Institute for [Visual and Analytic Computing](https://vac.uni-rostock.de/), Germany  
-10-2024 – Present  
-*Chair of 'Visual and Analytic Computing in Ocean Technologies'*  
+- Machine learning for spatio-temporal and multi-modal data.
+- Earth observation for environmental monitoring, including forests, agriculture, wetlands, drylands, and fire vulnerability.
+- Maritime and ocean-technology applications, including marine time series, virtual sensors, and visual analytics.
+- Representation learning, self-supervised learning, hybrid modelling, and efficient inference under data and resource constraints.
+
+
+## Current Positions
+
+**Tenure-track Assistant Professor**, University of Rostock, Institute for [Visual and Analytic Computing](https://vac.uni-rostock.de/), Germany  
+10-2024 - Present  
+*Chair of Visual and Analytic Computing in Ocean Technologies*  
 
 **Assistant Professor**, University of Copenhagen, Department of Computer Science, Denmark  
-12-2023 – Present (secondary employment)
+12-2023 - Present (secondary employment)
 
 <div class="cv-projects">
   <div class="cv-projects__label">Project</div>
@@ -29,8 +35,12 @@ Machine learning for spatio-temporal data, Earth observation, sustainability, an
   </ul>
 </div>
 
+
+
+## Academic Career
+
 **Assistant Professor**, University of Copenhagen, Department of Computer Science, Denmark  
-12-2022 – 11-2023  
+12-2022 - 11-2023  
 
 <div class="cv-projects">
   <div class="cv-projects__label">Projects</div>
@@ -41,7 +51,7 @@ Machine learning for spatio-temporal data, Earth observation, sustainability, an
 </div>
 
 **PostDoc**, University of Copenhagen, Department of Computer Science, Denmark  
-12-2020 – 11-2022  
+12-2020 - 11-2022  
 
 <div class="cv-projects">
   <div class="cv-projects__label">Projects</div>
@@ -53,7 +63,7 @@ Machine learning for spatio-temporal data, Earth observation, sustainability, an
 </div>
 
 **PostDoc**, University of Copenhagen, Department of Computer Science, Denmark  
-12-2018 – 11-2020  
+12-2018 - 11-2020  
 
 <div class="cv-projects">
   <div class="cv-projects__label">Projects</div>
@@ -64,7 +74,7 @@ Machine learning for spatio-temporal data, Earth observation, sustainability, an
 </div>
 
 **PostDoc**, University of Oldenburg, Computational Intelligence Lab, Germany  
-01-2018 – 12-2018  
+01-2018 - 12-2018  
 *Focus on deep learning methods for time series and image data*  
 
 
@@ -91,9 +101,9 @@ Machine learning for spatio-temporal data, Earth observation, sustainability, an
 - **Programming Course Java** (2010–2011): Taught tutorials and graded assignments
 
 ## Education
-- **Dr. rer. nat. in Computer Science (Summa Cum Laude)**, University of Oldenburg (2014 – 2018)
-- **M.Sc. in Computer Science**, University of Oldenburg (2012 – 2014)
-- **B.Sc. in Computer Science**, University of Oldenburg (2009 – 2012)
+- **Dr. rer. nat. in Computer Science (Summa Cum Laude)**, University of Oldenburg (2014 - 2018)
+- **M.Sc. in Computer Science**, University of Oldenburg (2012 - 2014)
+- **B.Sc. in Computer Science**, University of Oldenburg (2009 - 2012)
 
 ## Awards & Scholarships
 - 2016: *Travel Grant*, IEEE WCCI
