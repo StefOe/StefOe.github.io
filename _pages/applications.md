@@ -29,7 +29,7 @@ Useful skills:
 
 ## HiWi/Research Assistant Applications
 
-HiWi tasks usually involve coding, data preparation, experiments, literature work, reproducibility checks, or support for research prototypes. Please include:
+HiWi tasks usually involve coding, data preparation, experiments, literature work, reproducibility checks, or support for research prototypes. Please send a concise [email](mailto:stefan.oehmcke@uni-rostock.de?subject=%5BStudent%20Application%5D%20HiWi%20request) with the subject line tag `[Student Application]` and include:
 
 - Short motivation: what you want to work on and why.
 - CV or brief academic background.
@@ -41,7 +41,7 @@ If your background matches the topic and a position is available, I will invite 
 
 ## Master Projects
 
-For Master projects, please send a concise email with:
+For Master projects, please send a concise [email](mailto:stefan.oehmcke@uni-rostock.de?subject=%5BStudent%20Application%5D%20Master%20project%20request) with the subject line tag `[Student Application]` and:
 
 - Your study program and expected project/thesis timeline.
 - The ML topics or application domains you are interested in.
