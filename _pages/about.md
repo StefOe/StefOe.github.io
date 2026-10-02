@@ -7,6 +7,19 @@ redirect_from:
   - /about.html
 ---
 
+<aside id="phd-opening" class="notice--info" aria-label="PhD opening" hidden>
+  <p><strong>We're hiring: PhD researcher / Research Assistant (m/f/d)</strong></p>
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7511441491836194816" title="LinkedIn post: Machine Learning for Earth Observation PhD opening" width="100%" height="700" style="border: 0;" loading="lazy" allowfullscreen></iframe>
+  <p><strong>Apply by 15 October 2026.</strong></p>
+  <p><a class="btn btn--primary" href="https://lnkd.in/eSkQVMSb">View position &amp; apply</a> · <a href="https://www.linkedin.com/posts/stefan-oehmcke-750440247_research-assistant-mfd-machine-learning-activity-7511441491836194816-VG2F">View post on LinkedIn</a></p>
+</aside>
+<script>
+  // Hide after the deadline, even when the static site has not been rebuilt.
+  // Rostock is on CEST (UTC+02:00) on 15 October 2026.
+  document.getElementById('phd-opening').hidden =
+    Date.now() >= Date.parse('2026-10-16T00:00:00+02:00');
+</script>
+
 I develop machine learning methods for spatio-temporal and multi-modal data in environmental and maritime applications, with a focus on _ML against climate change_.
 
 ## Research Focus
