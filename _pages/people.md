@@ -48,7 +48,8 @@ author_profile: true
 <tr>
   <td style="border:none; vertical-align:top;">
     <b><a href="https://tomsiegl.github.io/">Tom Siegl</a></b><br/>
-    <i>PhD Student</i>
+    <i>PhD Student</i><br/>
+    <a>tom.siegl[at]uni-rostock.de</a>
   </td>
   <td style="border:none;"></td>
 </tr>
