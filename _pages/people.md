@@ -47,6 +47,13 @@ author_profile: true
 </tr>
 <tr>
   <td style="border:none; vertical-align:top;">
+    <b><a href="https://tomsiegl.github.io/">Tom Siegl</a></b><br/>
+    <i>PhD Student</i>
+  </td>
+  <td style="border:none;"></td>
+</tr>
+<tr>
+  <td style="border:none; vertical-align:top;">
     <b>Pratham Tatraiya</b><br/>
     <i>Research Assistant</i><br/>
     <a>pratham.tatraiya[at]uni-rostock.de</a>
